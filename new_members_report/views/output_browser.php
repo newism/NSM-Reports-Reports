@@ -34,9 +34,10 @@
 
 	<h2>Graphs</h2>
 	
-	<div style="margin:0 auto 0 auto; width:830px; height:380px">
-		<div id="chart_members" style="display:inline; width:620px; height:380px;"></div>
-		<div id="chart_groups" style="display:inline; width:200px; height:380px;"></div>
+	<div>
+		<div id="chart_members" style="height:260px;"></div>
+		
+		<div id="chart_groups" style="height:260px;"></div>
 	</div>
 	
 	<script type="text/javascript">
@@ -71,8 +72,8 @@
 		 	 // Set chart options
 			  var options = {
 				title: "Member sign-ups (<?= date('Y-m-d', local_to_gmt($config['date_start_filter'])); ?> - <?= date('Y-m-d', local_to_gmt($config['date_end_filter'])); ?>)",
-				width: 700,
-				height: 380,
+				//width: 700,
+				height: 260,
 				<?php if ($config['_output'] == 'browser') : ?>
 				backgroundColor: "#ECF1F4",
 				<?php endif; ?>
@@ -118,13 +119,13 @@
 			// Set chart options
 			var options = {
 				title: "New members (<?= $totals['new_members']; ?>)",
-				width: 120,
-				height: 160,
+				//width: 240,
+				height: 260,
 				<?php if ($config['_output'] == 'browser') : ?>
 				backgroundColor: "#ECF1F4",
 				<?php endif; ?>
 				legend: {
-					position: "none"
+					position: "left"
 				}
 			};
 
