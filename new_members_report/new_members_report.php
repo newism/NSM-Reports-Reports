@@ -395,7 +395,8 @@ BEHAVIOURS;
 		$db_new_members = $get_new_members->row();
 		$new_members = $db_new_members->num;
 		
-		$perc_increase =  ($new_members / ($total_members - $new_members)) * 100;
+		$existing_members = ($total_members - $new_members);
+		$perc_increase =  ($existing_members < 1 ? false : ($new_members / $existing_members) * 100);
 		
 		// get chart data
 		$chart_groupings = array(
@@ -488,7 +489,7 @@ BEHAVIOURS;
 		
 		$results['_totals'] = array(
 			'total_members' => $total_members,
-			'existing_members' => ($total_members-$new_members),
+			'existing_members' => $existing_members,
 			'new_members' => $new_members,
 			'perc_increase' => $perc_increase
 		);

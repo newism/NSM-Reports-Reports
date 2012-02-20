@@ -156,7 +156,7 @@
 		</tr>
 		<tr>
 			<td>Percentage increase</td>
-			<td><?= round($totals['perc_increase'],2); ?>%</td>
+			<td><?= ($totals['perc_increase'] ? round($totals['perc_increase'], 2) : 'NA'); ?>%</td>
 		</tr>
 	</table>
 	
@@ -165,7 +165,7 @@
 		<small>
 			(showing <?= count($rows); ?>
 			 of <?= $totals['new_members']; ?> members,
-			 starting at <?= $config['row_offset']; ?>)
+			 starting at row <?= ($config['row_offset']+1); ?>)
 		</small>
 	</h2>
 	<table class="data col_sortable NSM_Stripeable">
