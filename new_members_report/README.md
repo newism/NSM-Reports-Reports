@@ -1,7 +1,7 @@
 NSM Reports: New Members
 ========================
 
-This addon requires [NSM Reports](http://ee-garage.com/nsm-reports) to function.
+This report requires [NSM Reports](http://ee-garage.com/nsm-reports) to function.
 
 Overview
 --------
